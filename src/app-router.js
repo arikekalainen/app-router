@@ -691,11 +691,11 @@
 
     // number
     if (!isNaN(value) && value !== '' && value.charAt(0) !== '0') {
-      return +value;
+      return "" + value;
     }
 
     // string
-    return decodeURIComponent(value);
+    return decodeURIComponent("" + value);
   };
 
   // testRegExString(pattern, value) - Parse HTML attribute path="/^\/\w+\/\d+$/i" to a regular
